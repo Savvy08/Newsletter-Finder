@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 420px; 
+  min-height: 300px;
+  padding: 16px; 
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px; 
+  line-height: 1.5;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+h2 { 
+  margin: 0 0 16px; 
+  font-size: 18px; 
+  font-weight: 600;
+  color: #1a1a1a; 
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 8px;
+}
+
+#status {
+  display: none;
+  padding: 10px 12px; 
+  border-radius: 6px; 
+  margin-bottom: 12px; 
+  font-weight: 500;
+  background: #e8f5e9; 
+  border-left: 4px solid #4CAF50;
+  color: #2e7d32;
+  font-size: 13px;
+}
+
+#last-added { 
+  display: none;
+  padding: 10px 12px; 
+  border-radius: 6px; 
+  margin-bottom: 12px; 
+  font-weight: 500;
+  background: #fff3cd; 
+  border-left: 4px solid #ffc107;
+  color: #856404;
+  font-size: 13px;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#list {
+  margin-bottom: 16px;
+}
+
+ul { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  max-height: 360px; 
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+li { 
+  position: relative;
+  margin: 0 0 10px 0; 
+  padding: 12px 14px; 
+  background: #f8f9fa; 
+  border-radius: 8px; 
+  border-left: 4px solid #4CAF50;
+  transition: all 0.2s ease;
+}
+
+li:hover {
+  background: #e9ecef;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+a { 
+  color: #0066cc !important; 
+  text-decoration: none; 
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+  word-wrap: break-word;
+  padding-right: 30px;
+}
+
+a:hover { 
+  text-decoration: underline;
+  color: #004499 !important;
+}
+
+small { 
+  display: block; 
+  color: #666;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.delete-btn {
+  float: right;
+  padding: 2px 7px !important;
+  font-size: 12px !important;
+  background: #ff5252 !important;
+  margin: 0 !important;
+  min-width: auto !important;
+  line-height: 1.2;
+}
+
+.delete-btn:hover {
+  background: #ff1744 !important;
+}
+
+button {
+  background: #4CAF50; 
+  color: white; 
+  border: none; 
+  padding: 9px 16px; 
+  border-radius: 6px; 
+  cursor: pointer; 
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0 6px 0 0;
+  transition: all 0.2s ease;
+  min-width: 80px;
+}
+
+button:hover { 
+  background: #45a049;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled { 
+  background: #ccc; 
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+#export {
+  background: #2196F3;
+}
+
+#export:hover {
+  background: #1976D2;
+}
+
+#export:disabled { 
+  background: #ddd; 
+}
+
+#clear {
+  background: #f44336;
+}
+
+#clear:hover {
+  background: #d32f2f;
+}
+
+#clear:disabled {
+  background: #ddd;
+}
+
+.button-group {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
